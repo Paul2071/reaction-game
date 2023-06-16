@@ -1,5 +1,6 @@
 <template>
   <h1>Reaction time</h1>
+  <button @click="start"> Click to play </button>
 </template>
 
 <script>
@@ -7,8 +8,17 @@
 
 export default {
   name: 'App',
-  components: {
-   
+  components: {  },
+  data() {
+    return {
+      isPlaying: false,
+      
+    }
+  },
+  methods: {
+    start() {
+      this.isPlaying = true
+    }
   }
 }
 </script>
