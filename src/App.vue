@@ -1,28 +1,33 @@
 <template>
   <h1>Reaction time</h1>
-  <button @click="start"> Click to play </button>
+  <button @click="start" :disabled="isPlaying"> Click to play </button>
+
+  <Block v-if="isPlaying" :delay="delay"/>
+
 </template>
 
 <script>
 
+import Block from "./components/Block.vue"
 
 export default {
   name: 'App',
-  components: {  },
+  components: { Block },
   data() {
     return {
       isPlaying: false,
-      delay: null
+      delay: 2000
     }
   },
   methods: {
     start() {
       this.delay= 2000 + Math.random() * 5000
       this.isPlaying = true
-      console.log(this.delay)
-    }
-  }
+     
+  },
+ }
 }
+
 </script>
 
 <style>
