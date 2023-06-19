@@ -15,11 +15,14 @@
             }
         },
         mounted() {
-            console.log("showBlock")
+            
             setTimeout( () => {this.showBlock = true, console.log(this.delay)}, this.delay)
         } ,
         updated() {
-
+            console.log("updated fired")    
+        },
+        unmounted() {
+            console.log("unmounted fired")
         }
     }
 

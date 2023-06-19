@@ -1,1 +1,3 @@
 short note, look into lifecycle hooks properly. They seem gnarly and really useful. Ive used one here to fire the settimeout code to get a number for the delay, then change the data when the delay expires.
+
+Unmounted seems like a cool hook, useful for when elements on page change / navigating between pages.
