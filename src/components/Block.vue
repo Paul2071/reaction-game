@@ -2,6 +2,9 @@
     <div class="block" v-if="showBlock" @click="stopTimer">
         click me
     </div>
+
+   
+
 </template>
 
 <script>
